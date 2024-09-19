@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Google Search</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<style>
+		body {
+			background-color: #f2f2f2;
+			font-family: Arial, sans-serif;
+			display: flex;
+			flex-direction: column;
+			min-height: 100vh;
+		}
+		.container {
+			max-width: 800px;
+			margin: 0 auto;
+			padding: 20px;
+			text-align: center;
+			flex-grow: 1;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+		}
+		h1 {
+			font-size: 48px;
+			font-weight: 900;
+			margin-bottom: 20px;
+			background: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+		}
+		form {
+			display: inline-block;
+			margin-bottom: 20px;
+		}
+		input[type="text"] {
+			padding: 10px;
+			border: none;
+			border-radius: 5px;
+			box-shadow: 0 0 5px #ccc;
+			width: 80%;
+			max-width: 500px;
+			margin-right: 10px;
+		}
+		button {
+			background-color: #4285f4;
+			color: #fff;
+			border: none;
+			border-radius: 5px;
+			padding: 10px 20px;
+			cursor: pointer;
+		}
+		button:hover {
+			background-color: #3367d6;
+		}
+		.buttons {
+			display: flex;
+			justify-content: center;
+			flex-wrap: wrap;
+		}
+		.button {
+			background-color: #4285f4;
+			color: #fff;
+			border: none;
+			border-radius: 5px;
+			padding: 10px 20px;
+			margin: 10px;
+			cursor: pointer;
+			transition: all 0.3s ease;
+			text-decoration: none;
+		}
+		.button:hover {
+			background-color: #3367d6;
+		}
+		.footer-button {
+			background: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
+			color: #fff;
+			border: none;
+			border-radius: 5px;
+			padding: 10px 20px;
+			margin: 20px 0;
+			cursor: pointer;
+			transition: all 0.3s ease;
+			text-decoration: none;
+			font-weight: bold;
+		}
+		.footer-button:hover {
+			opacity: 0.8;
+		}
+		footer {
+			background-color: transparent;
+			text-align: center;
+			padding: 20px;
+			margin-top: auto;
+		}
+		@media (max-width: 600px) {
+			h1 {
+				font-size: 36px;
+			}
+			input[type="text"] {
+				width: 100%;
+				margin-bottom: 10px;
+			}
+			form {
+				width: 100%;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+			}
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<h1>Google Search</h1>
+		<form action="https://www.google.com/search" method="GET" target="_blank">
+			<input type="text" name="q" placeholder="Search...">
+			<button type="submit">Search</button>
+		</form>
+		<div class="buttons">
+			<a href="https://www.youtube.com/" target="_blank" class="button">YouTube</a>
+			<a href="https://www.facebook.com/" target="_blank" class="button">Facebook</a>
+			<a href="https://www.instagram.com/" target="_blank" class="button">Instagram</a>
+			<a href="https://www.twitter.com/" target="_blank" class="button">Twitter</a>
+			<a href="https://vk.com/id551649082/" target="_blank" class="button">ВКонтакте</a>
+			<a href="https://translit.ru/" target="_blank" class="button">Translit</a>
+			<a href="https://translate.google.com/?hl=ru&sl=en&tl=ru&op=" target="_blank" class="button">Переводчик</a>
+			<a href="https://news.startpage.co.il/russian/" target="_blank" class="button">StartPage</a>
+			<a href="https://www.yaplakal.com/" target="_blank" class="button">Я Плакал</a>
+			<a href="https://discord.com/channels/1007000829741506630/1007000829741506633" target="_blank" class="button">Discord</a>
+			<a href="https://chat.openai.com/chat/" target="_blank" class="button">ChatGPT</a>
+			<a href="https://bard.google.com/?hl=en" target="_blank" class="button">GEMINI</a>
+			<a href="https://platform.openai.com/playground" target="_blank" class="button">Playground</a>
+			<a href="https://you.com/search?q=who+are+you&tbm=youchat&cfr=chat/" target="_blank" class="button">ChatYOU</a>
+			<a href="https://app.writesonic.com/ru/template/d1976a3f-a63f-49d5-a833-6fb1ef9d06a1/chatsonic/21b6b105-4852-4597-8280-a3bd6ec39a7d" target="_blank" class="button">Chatsonic</a>
+			<a href="https://www.perplexity.ai/" target="_blank" class="button">Perplexity</a>
+			<a href="https://poe.com/" target="_blank" class="button">Poe</a>
+			<a href="https://www.phind.com/" target="_blank" class="button">Phind</a>
+			<a href="https://www.aiuncensored.info//" target="_blank" class="button">ИИ без цензуры</a>
+			<a href="https://www.iloveimg.com/ru" target="_blank" class="button">Все инструменты для изображений
+</a>
+			<a href="https://klingai.com/" target="_blank" class="button">KLING AI</a>
+			<a href="https://www.bing.com/search?q=Bing+AI&showconv=1&FORM=hpcodx/" target="_blank" class="button">COPILOT</a>
+			<a href="https://andisearch.com/" target="_blank" class="button">Andi</a>
+			<a href="https://www.tiktok.com/explore" target="_blank" class="button">TIKTOK</a>
+		</div>
+		<!-- Разноцветная кнопка для перехода на другую страницу, расположена ниже -->
+		<a href="page2.html" class="footer-button">Перейти на вторую страницу</a>
+	</div>
+	<footer>
+		<p>© 2024 Моя компания. Все права защищены.</p>
+	</footer>
+</body>
+</html>

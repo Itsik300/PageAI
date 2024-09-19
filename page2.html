@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Другая страница</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            background-color: #f2f2f2;
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            margin: 0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: center;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        h1 {
+            font-size: 3em;
+            font-weight: 900;
+            margin-bottom: 20px;
+            background: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        p {
+            font-size: 1.2em;
+        }
+        .button {
+            background-color: #4285f4;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            padding: 0.5em 1em;
+            cursor: pointer;
+            margin-top: 20px;
+            text-decoration: none;
+            display: inline-block;
+        }
+        .button:hover {
+            background-color: #3367d6;
+        }
+        footer {
+            background-color: transparent;
+            text-align: center;
+            padding: 20px;
+            margin-top: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Добро пожаловать на вторую страницу</h1>
+        <p>Это пример дополнительной страницы, которую вы можете просматривать с любого устройства через ваш локальный сервер Flask.</p>
+        <a href="index.html" class="button">Вернуться на главную страницу</a>
+    </div>
+    <footer>
+        <p>© 2024 Моя компания. Все права защищены.</p>
+    </footer>
+</body>
+</html>
