@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html>
+<html lang="ru">
 <head>
-    <title>Другая страница</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Другая страница</title>
     <style>
         body {
             background-color: #f2f2f2;
@@ -14,7 +14,7 @@
             margin: 0;
         }
         .container {
-            max-width: 800px;
+            max-width: 90%; /* Уменьшенная ширина для мобильных */
             margin: 0 auto;
             padding: 20px;
             text-align: center;
@@ -24,7 +24,7 @@
             justify-content: center;
         }
         h1 {
-            font-size: 3em;
+            font-size: 2.5em;
             font-weight: 900;
             margin-bottom: 20px;
             background: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
@@ -32,7 +32,7 @@
             -webkit-text-fill-color: transparent;
         }
         p {
-            font-size: 1.2em;
+            font-size: 1em;
         }
         .button {
             background-color: #4285f4;
@@ -60,8 +60,24 @@
             margin-top: 20px;
         }
         video {
-            width: 640px; /* Устанавливаем фиксированную ширину видео */
-            height: 360px; /* Устанавливаем фиксированную высоту видео */
+            width: 100%;
+            height: auto;
+        }
+        /* Медиазапросы для адаптации к экранам меньшего размера */
+        @media (min-width: 600px) {
+            .container {
+                max-width: 800px;
+            }
+            h1 {
+                font-size: 3em;
+            }
+            p {
+                font-size: 1.2em;
+            }
+            video {
+                width: 640px;
+                height: 360px;
+            }
         }
     </style>
 </head>
@@ -84,4 +100,3 @@
     </footer>
 </body>
 </html>
-
