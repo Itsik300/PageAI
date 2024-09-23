@@ -14,7 +14,7 @@
             margin: 0;
         }
         .container {
-            max-width: 100%; /* Уменьшенная ширина для мобильных */
+            max-width: 100%; /* Адаптивная ширина для мобильных и компьютеров */
             margin: 0 auto;
             padding: 20px;
             text-align: center;
@@ -24,7 +24,7 @@
             justify-content: center;
         }
         h1 {
-            font-size: 2em; /* Уменьшен размер шрифта для мобильных устройств */
+            font-size: 2em; /* Шрифт для мобильных устройств */
             font-weight: 900;
             margin-bottom: 20px;
             background: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
@@ -32,7 +32,7 @@
             -webkit-text-fill-color: transparent;
         }
         p {
-            font-size: 1em; /* Уменьшен размер шрифта для мобильных устройств */
+            font-size: 1em; /* Текст для мобильных устройств */
         }
         .button {
             background-color: #4285f4;
@@ -60,22 +60,44 @@
             margin-top: 20px;
         }
         video {
-            width: 100%; /* Видео адаптируется под размер экрана */
+            width: 100%; /* Адаптация ширины под экран */
             height: auto;
         }
-        /* Медиазапросы для маленьких экранов */
-        @media (max-width: 600px) {
+
+        /* Медиазапросы для экранов шире 1024px (настольные компьютеры) */
+        @media (min-width: 1024px) {
+            .container {
+                max-width: 800px; /* Ограничение ширины для компьютеров */
+            }
             h1 {
-                font-size: 1.5em; /* Еще меньше для маленьких экранов */
+                font-size: 3em; /* Увеличение заголовка для компьютеров */
             }
             p {
-                font-size: 0.9em; /* Уменьшение текста для маленьких экранов */
+                font-size: 1.2em; /* Увеличение текста на компьютерах */
+            }
+            video {
+                width: 640px; /* Установка фиксированной ширины видео для компьютеров */
+                height: 360px; /* Фиксированная высота видео */
+            }
+        }
+
+        /* Медиазапросы для мобильных устройств (ширина менее 600px) */
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 1.5em; /* Уменьшение заголовка для мобильных */
+            }
+            p {
+                font-size: 0.9em; /* Уменьшение текста для мобильных */
             }
             .container {
-                padding: 10px; /* Уменьшение отступов */
+                padding: 10px; /* Уменьшенные отступы для мобильных */
             }
             .button {
                 padding: 0.4em 0.8em; /* Меньшие кнопки для мобильных */
+            }
+            video {
+                width: 100%; /* Видео адаптируется к мобильному экрану */
+                height: auto; /* Автоматическая высота */
             }
         }
     </style>
@@ -83,7 +105,7 @@
 <body>
     <div class="container">
         <h1>Добро пожаловать на вторую страницу</h1>
-        <p></p>
+        <p>Здесь отображается видео и кнопка для возврата на главную страницу.</p>
         <div class="video-container">
             <video autoplay muted>
                 <source src="Gen-3 Alpha Turbo 922435381, Cropped - jhhgjhgjgh, M 5.mp4" type="video/mp4">
