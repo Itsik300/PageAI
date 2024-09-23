@@ -54,12 +54,29 @@
             padding: 20px;
             margin-top: auto;
         }
+        .video-container {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        video {
+            width: 640px; /* Устанавливаем фиксированную ширину видео */
+            height: 360px; /* Устанавливаем фиксированную высоту видео */
+        }
     </style>
 </head>
 <body>
     <div class="container">
         <h1>Добро пожаловать на вторую страницу</h1>
-        <p>Это пример дополнительной страницы, которую вы можете просматривать с любого устройства через ваш локальный сервер Flask.</p>
+        <p></p>
+        <div class="video-container">
+            <video autoplay muted>
+                <source src="Gen-3 Alpha Turbo 922435381, Cropped - jhhgjhgjgh, M 5.mp4" type="video/mp4">
+                <source src="Gen-3 Alpha Turbo 922435381, Cropped - jhhgjhgjgh, M 5.webm" type="video/webm">
+                <source src="Gen-3 Alpha Turbo 922435381, Cropped - jhhgjhgjgh, M 5.ogg" type="video/ogg">
+                Ваш браузер не поддерживает HTML5 видео.
+            </video>
+        </div>
         <a href="index.html" class="button">Вернуться на главную страницу</a>
     </div>
     <footer>
@@ -67,3 +84,4 @@
     </footer>
 </body>
 </html>
+
