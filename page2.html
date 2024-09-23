@@ -14,7 +14,7 @@
             margin: 0;
         }
         .container {
-            max-width: 90%; /* Уменьшенная ширина для мобильных */
+            max-width: 100%; /* Уменьшенная ширина для мобильных */
             margin: 0 auto;
             padding: 20px;
             text-align: center;
@@ -24,7 +24,7 @@
             justify-content: center;
         }
         h1 {
-            font-size: 2.5em;
+            font-size: 2em; /* Уменьшен размер шрифта для мобильных устройств */
             font-weight: 900;
             margin-bottom: 20px;
             background: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
@@ -32,7 +32,7 @@
             -webkit-text-fill-color: transparent;
         }
         p {
-            font-size: 1em;
+            font-size: 1em; /* Уменьшен размер шрифта для мобильных устройств */
         }
         .button {
             background-color: #4285f4;
@@ -60,23 +60,22 @@
             margin-top: 20px;
         }
         video {
-            width: 100%;
+            width: 100%; /* Видео адаптируется под размер экрана */
             height: auto;
         }
-        /* Медиазапросы для адаптации к экранам меньшего размера */
-        @media (min-width: 600px) {
-            .container {
-                max-width: 800px;
-            }
+        /* Медиазапросы для маленьких экранов */
+        @media (max-width: 600px) {
             h1 {
-                font-size: 3em;
+                font-size: 1.5em; /* Еще меньше для маленьких экранов */
             }
             p {
-                font-size: 1.2em;
+                font-size: 0.9em; /* Уменьшение текста для маленьких экранов */
             }
-            video {
-                width: 640px;
-                height: 360px;
+            .container {
+                padding: 10px; /* Уменьшение отступов */
+            }
+            .button {
+                padding: 0.4em 0.8em; /* Меньшие кнопки для мобильных */
             }
         }
     </style>
@@ -84,7 +83,7 @@
 <body>
     <div class="container">
         <h1>Добро пожаловать на вторую страницу</h1>
-        <p></p>
+        <p>Здесь отображается видео и кнопка для возврата на главную страницу.</p>
         <div class="video-container">
             <video autoplay muted>
                 <source src="Gen-3 Alpha Turbo 922435381, Cropped - jhhgjhgjgh, M 5.mp4" type="video/mp4">
