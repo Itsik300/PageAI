@@ -1,163 +1,190 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Google Search</title>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<style>
-		body {
-			background-color: #f2f2f2;
-			font-family: Arial, sans-serif;
-			display: flex;
-			flex-direction: column;
-			min-height: 100vh;
-		}
-		.container {
-			max-width: 800px;
-			margin: 0 auto;
-			padding: 20px;
-			text-align: center;
-			flex-grow: 1;
-			display: flex;
-			flex-direction: column;
-			justify-content: center;
-		}
-		h1 {
-			font-size: 48px;
-			font-weight: 900;
-			margin-bottom: 20px;
-			background: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
-			-webkit-background-clip: text;
-			-webkit-text-fill-color: transparent;
-		}
-		form {
-			display: inline-block;
-			margin-bottom: 20px;
-		}
-		input[type="text"] {
-			padding: 10px;
-			border: none;
-			border-radius: 5px;
-			box-shadow: 0 0 5px #ccc;
-			width: 80%;
-			max-width: 500px;
-			margin-right: 10px;
-		}
-		button {
-			background-color: #4285f4;
-			color: #fff;
-			border: none;
-			border-radius: 5px;
-			padding: 10px 20px;
-			cursor: pointer;
-		}
-		button:hover {
-			background-color: #3367d6;
-		}
-		.buttons {
-			display: flex;
-			justify-content: center;
-			flex-wrap: wrap;
-		}
-		.button {
-			background-color: #4285f4;
-			color: #fff;
-			border: none;
-			border-radius: 5px;
-			padding: 10px 20px;
-			margin: 10px;
-			cursor: pointer;
-			transition: all 0.3s ease;
-			text-decoration: none;
-		}
-		.button:hover {
-			background-color: #3367d6;
-		}
-		.footer-button {
-			background: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
-			color: #fff;
-			border: none;
-			border-radius: 5px;
-			padding: 10px 20px;
-			margin: 20px 0;
-			cursor: pointer;
-			transition: all 0.3s ease;
-			text-decoration: none;
-			font-weight: bold;
-		}
-		.footer-button:hover {
-			opacity: 0.8;
-		}
-		footer {
-			background-color: transparent;
-			text-align: center;
-			padding: 20px;
-			margin-top: auto;
-		}
-		@media (max-width: 600px) {
-			h1 {
-				font-size: 36px;
-			}
-			input[type="text"] {
-				width: 100%;
-				margin-bottom: 10px;
-			}
-			form {
-				width: 100%;
-				display: flex;
-				flex-direction: column;
-				align-items: center;
-			}
-		}
-	</style>
+    <title>Google Search</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            background-color: #f2f2f2;
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: center;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        h1 {
+            font-size: 48px;
+            font-weight: 900;
+            margin-bottom: 20px;
+            background: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        form {
+            display: inline-block;
+            margin-bottom: 20px;
+        }
+        input[type="text"] {
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            box-shadow: 0 0 5px #ccc;
+            width: 80%;
+            max-width: 500px;
+            margin-right: 10px;
+        }
+        button {
+            background-color: #4285f4;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #3367d6;
+        }
+        .buttons {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .button {
+            background-color: #4285f4;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            margin: 10px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+        .button:hover {
+            background-color: #3367d6;
+        }
+        .footer-button {
+            background: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            margin: 20px 0;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .footer-button:hover {
+            opacity: 0.8;
+        }
+        footer {
+            background-color: transparent;
+            text-align: center;
+            padding: 20px;
+            margin-top: auto;
+        }
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 36px;
+            }
+            input[type="text"] {
+                width: 100%;
+                margin-bottom: 10px;
+            }
+            form {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
 </head>
 <body>
-	<div class="container">
-		<h1>Google Search</h1>
-		<form action="https://www.google.com/search" method="GET" target="_blank">
-			<input type="text" name="q" placeholder="Search...">
-			<button type="submit">Search</button>
-		</form>
-		<div class="buttons">
-			<a href="https://www.youtube.com/" target="_blank" class="button">YouTube</a>
-			<a href="https://www.facebook.com/" target="_blank" class="button">Facebook</a>
-			<a href="https://www.instagram.com/" target="_blank" class="button">Instagram</a>
-			<a href="https://www.twitter.com/" target="_blank" class="button">Twitter</a>
-			<a href="https://vk.com/id551649082/" target="_blank" class="button">ВКонтакте</a>
-			<a href="https://translit.ru/" target="_blank" class="button">Translit</a>
-			<a href="https://translate.google.com/?hl=ru&sl=en&tl=ru&op=" target="_blank" class="button">Переводчик</a>
-			<a href="https://news.startpage.co.il/russian/" target="_blank" class="button">StartPage</a>
-			<a href="https://www.yaplakal.com/" target="_blank" class="button">Я Плакал</a>
-			<a href="https://discord.com/channels/1007000829741506630/1007000829741506633" target="_blank" class="button">Discord</a>
-			<a href="https://glyphy.io/?hl=en" target="_blank" class="button">Глифы</a>
-			<a href="https://boxicons.com/" target="_blank" class="button">Boxicons</a>
-			<a href="https://chat.openai.com/chat/" target="_blank" class="button">ChatGPT</a>
-			<a href="https://bard.google.com/?hl=en" target="_blank" class="button">GEMINI</a>
-			<a href="https://platform.openai.com/playground" target="_blank" class="button">Playground</a>
-			<a href="https://you.com/search?q=who+are+you&tbm=youchat&cfr=chat/" target="_blank" class="button">ChatYOU</a>
-			<a href="https://groq.com/" target="_blank" class="button">Groq</a> 
-			<a href="https://www.perplexity.ai/" target="_blank" class="button">Perplexity</a>
-			<a href="https://poe.com/" target="_blank" class="button">Poe</a>
-			<a href="https://chat.deepseek.com/" target="_blank" class="button">Deepseek</a>
-			<a href="https://www.phind.com/" target="_blank" class="button">Phind</a>
-			<a href="https://gptstore.ai/gpts?page=1/" target="_blank" class="button">Лучшие GPT ChatGPT </a>
-			<a href="https://ya.ru/?npr=1&utm_referrer=https%3A%2F%2Fyandex.ru%2F&neuro=1" target="_blank" class="button">Нейро</a>
-			<a href="https://chat.mistral.ai/chat" target="_blank" class="button">Mistral AI</a>
-			<a href="https://www.iloveimg.com/ru" target="_blank" class="button">Все инструменты для изображений</a>
-			<a href="https://klingai.com/" target="_blank" class="button">KLING AI</a>
-			<a href="https://www.bing.com/search?q=Bing+AI&showconv=1&FORM=hpcodx/" target="_blank" class="button">COPILOT</a>
-			<a href="https://andisearch.com/" target="_blank" class="button">Andi</a>
-			<a href="https://overallgpt.com/" target="_blank" class="button">ВсегоGPT</a>
-			<a href="https://crayonai.net/ai-assistant" target="_blank" class="button">ИИ-помощник</a>
-			<a href="https://claude.ai/new" target="_blank" class="button">Claude</a>
-			<a href="https://www.tiktok.com/explore" target="_blank" class="button">TIKTOK</a>
-			<a href="https://letsconvene.im/app/#/" target="_blank" class="button">Комнаты</a>
-		</div>
-		<!-- Разноцветная кнопка для перехода на другую страницу, расположена ниже -->
-		<a href="page2.html" class="footer-button">Перейти на вторую страницу</a>
-	</div>
-	<footer>
-		<p>© 2024 Моя компания. Все права защищены.</p>
-	</footer>
+    <div class="container">
+        <h1>Google Search</h1>
+        <form action="https://www.google.com/search" method="GET" target="_blank">
+            <input type="text" name="q" placeholder="Search...">
+            <button type="submit">Search</button>
+        </form>
+        
+        <h2 style="color: #ff6347;">Социальные сети</h2>
+        <div class="buttons">
+            <a href="https://www.youtube.com/" target="_blank" class="button">YouTube</a>
+            <a href="https://www.facebook.com/" target="_blank" class="button">Facebook</a>
+            <a href="https://www.instagram.com/" target="_blank" class="button">Instagram</a>
+            <a href="https://www.twitter.com/" target="_blank" class="button">Twitter</a>
+            <a href="https://vk.com/id551649082/" target="_blank" class="button">ВКонтакте</a>
+            <a href="https://discord.com/channels/1007000829741506630/1007000829741506633" target="_blank" class="button">Discord</a>
+            <a href="https://www.tiktok.com/explore" target="_blank" class="button">TIKTOK</a>
+        </div>
+        
+        <h2 style="color: #4682b4;">Новостные сайты и другие </h2>
+        <div class="buttons">
+            <a href="https://news.startpage.co.il/russian/" target="_blank" class="button">StartPage</a>
+            <a href="https://www.yaplakal.com/" target="_blank" class="button">Я Плакал</a>
+            <a href="https://mspoweruser.com/ru/" target="_blank" class="button">Последние технические новости</a>
+            <a href="https://neurohive.io/ru/" target="_blank" class="button">Neurohive Новости </a>
+            <a href="https://club.dns-shop.ru/" target="_blank" class="button">DNS Клуб </a>
+            <a href="https://letsconvene.im/app/#/" target="_blank" class="button">Комнаты</a>
+
+        </div>
+        
+        <h2 style="color: #32cd32;">Сайты с искусственным интеллектом</h2>
+        <div class="buttons">
+            <a href="https://chat.openai.com/chat/" target="_blank" class="button">ChatGPT</a>
+            <a href="https://bard.google.com/?hl=en" target="_blank" class="button">GEMINI</a>
+            <a href="https://platform.openai.com/playground" target="_blank" class="button">Playground</a>
+            <a href="https://you.com/search?q=who+are+you&tbm=youchat&cfr=chat/" target="_blank" class="button">ChatYOU</a>
+            <a href="https://groq.com/" target="_blank" class="button">Groq</a>
+            <a href="https://chat.mistral.ai/chat" target="_blank" class="button">Mistral AI</a>
+            <a href="https://gptstore.ai/gpts?page=1/" target="_blank" class="button">Лучшие GPT ChatGPT </a>
+            <a href="https://www.perplexity.ai/" target="_blank" class="button">Perplexity</a>
+            <a href="https://poe.com/" target="_blank" class="button">Poe</a>
+            <a href="https://www.phind.com/" target="_blank" class="button">Phind</a>
+            <a href="https://ya.ru/?npr=1&utm_referrer=https%3A%2F%2Fyandex.ru%2F&neuro=1" target="_blank" class="button">Нейро</a>
+  
+            <a href="https://www.bing.com/search?q=Bing+AI&showconv=1&FORM=hpcodx/" target="_blank" class="button">COPILOT</a>
+            <a href="https://andisearch.com/" target="_blank" class="button">Andi</a>
+            <a href="https://overallgpt.com/" target="_blank" class="button">ВсегоGPT</a>
+	    <a href="https://crayonai.net/ai-assistant" target="_blank" class="button">ИИ-помощник</a>
+	    <a href="https://claude.ai/new" target="_blank" class="button">Claude</a>
+	          </div>
+            
+            <h2 style="color: #9370DB;">Сайты для создания-редактирования текста и изображений </h2>
+        <div class="buttons">
+           <a href="https://www.shakker.ai/aigenerator" target="_blank" class="button">AIgenerator</a>
+           <a href="https://myneuralnetworks.ru/generating_images_from_text/" target="_blank" class="button"> Акулы нейронных сетей</a>
+           <a href="https://klingai.com/" target="_blank" class="button">KLING AI</a>
+           <a href="https://glif.app/@001/glifs/clzgvha5a00041aepvz2h4zi4" target="_blank" class="button">FLUX.1-pro</a>
+           <a href="https://www.blinkshot.io/" target="_blank" class="button">BlinKshot AI</a>
+           <a href="https://crayonai.net/ai-assistant" target="_blank" class="button">ИИ Карандаш </a>
+           <a href="https://www.iloveimg.com/ru" target="_blank" class="button">Все инструменты для изображений</a>
+           <a href="https://glyphy.io/?hl=en" target="_blank" class="button">Глифы</a>
+           <a href="https://www.i2img.com/ru/?hl=en" target="_blank" class="button">i2IMG</a>
+           <a href="https://boxicons.com/" target="_blank" class="button">Boxicons</a>
+           <a href="https://www.vidmore.com/ru/watermark-remover/#" target="_blank" class="button">Удаления водяных знаков</a>
+           <a href="https://neuralwriter.com/ru/prompt-tool/#progress=157" target="_blank" class="button">Генератор промптов ChatGPT</a>
+           
+</div>
+
+        
+        <!-- Разноцветная кнопка для перехода на другую страницу, расположена ниже -->
+        <a href="page2.html" class="footer-button">Перейти на вторую страницу</a>
+    </div>
+    <footer>
+        <p>© 2024 Моя компания. Все права защищены.</p>
+    </footer>
 </body>
 </html>
