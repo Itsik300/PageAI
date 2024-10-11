@@ -34,6 +34,9 @@
             cursor: pointer;
             text-decoration: none;
             font-size: 12px;
+            display: flex;
+            align-items: center;
+            gap: 5px;
         }
         .login-button:hover {
             background-color: #3367d6;
@@ -146,7 +149,9 @@
 </head>
 <body>
     <div class="header">
-        <a href="https://mail.google.com/" target="_blank" class="login-button">Войти</a>
+        <a href="https://mail.google.com/" target="_blank" class="login-button">
+            <i class="fas fa-envelope"></i> Войти
+        </a>
     </div>
     <div class="container">
         <h1>Google Search</h1>
