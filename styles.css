@@ -1,0 +1,139 @@
+body {
+    background-color: #f2f2f2;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    padding-top: 20px;
+}
+.header {
+    display: flex;
+    justify-content: flex-end;
+    padding: 5px 20px;
+    position: fixed;
+    top: 20px;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background-color: transparent;
+}
+.login-button {
+    background-color: #4285f4;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    padding: 3px 8px;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.login-button:hover {
+    background-color: #3367d6;
+}
+.container {
+    max-width: 800px;
+    margin: 0 auto 10px;
+    padding: 20px;
+    text-align: center;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+h1 {
+    font-size: 36px;
+    font-weight: 900;
+    margin-bottom: 20px;
+    background: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+}
+input[type="text"] {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 0 5px #ccc;
+    flex-grow: 1;
+    margin-right: 10px;
+}
+button {
+    background-color: #4285f4;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+button:hover {
+    background-color: #3367d6;
+}
+.buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+.button {
+    background-color: #4285f4;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.button:hover {
+    background-color: #3367d6;
+}
+.footer-button {
+    background: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    margin: 20px 0;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    font-weight: bold;
+}
+.footer-button:hover {
+    opacity: 0.8;
+}
+footer {
+    background-color: transparent;
+    text-align: center;
+    padding: 20px;
+    margin-top: auto;
+}
+@media (max-width: 600px) {
+    h1 {
+        font-size: 28px;
+    }
+    .button {
+        padding: 8px;
+        font-size: 12px;
+    }
+    .footer-button {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+}
