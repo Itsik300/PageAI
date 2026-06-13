@@ -3,121 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Другая страница</title>
-    <style>
-        body {
-            background-color: #f2f2f2;
-            font-family: Arial, sans-serif;
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
-            margin: 0;
-        }
-        .container {
-            max-width: 100%; /* Адаптивная ширина для мобильных и компьютеров */
-            margin: 0 auto;
-            padding: 20px;
-            text-align: center;
-            flex-grow: 1;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-        }
-        h1 {
-            font-size: 2em; /* Шрифт для мобильных устройств */
-            font-weight: 900;
-            margin-bottom: 20px;
-            background: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-        p {
-            font-size: 1em; /* Текст для мобильных устройств */
-        }
-        .button {
-            background-color: #4285f4;
-            color: #fff;
-            border: none;
-            border-radius: 5px;
-            padding: 0.5em 1em;
-            cursor: pointer;
-            margin-top: 20px;
-            text-decoration: none;
-            display: inline-block;
-        }
-        .button:hover {
-            background-color: #3367d6;
-        }
-        footer {
-            background-color: transparent;
-            text-align: center;
-            padding: 20px;
-            margin-top: auto;
-        }
-        .video-container {
-            display: flex;
-            justify-content: center;
-            margin-top: 20px;
-        }
-        video {
-            width: 100%; /* Адаптация ширины под экран */
-            height: auto;
-        }
-
-        /* Медиазапросы для экранов шире 1024px (настольные компьютеры) */
-        @media (min-width: 1024px) {
-            .container {
-                max-width: 800px; /* Ограничение ширины для компьютеров */
-            }
-            h1 {
-                font-size: 3em; /* Увеличение заголовка для компьютеров */
-            }
-            p {
-                font-size: 1.2em; /* Увеличение текста на компьютерах */
-            }
-            video {
-                width: 640px; /* Установка фиксированной ширины видео для компьютеров */
-                height: 360px; /* Фиксированная высота видео */
-            }
-        }
-
-        /* Медиазапросы для мобильных устройств (ширина менее 600px) */
-        @media (max-width: 600px) {
-            h1 {
-                font-size: 1.5em; /* Уменьшение заголовка для мобильных */
-            }
-            p {
-                font-size: 0.9em; /* Уменьшение текста для мобильных */
-            }
-            .container {
-                padding: 10px; /* Уменьшенные отступы для мобильных */
-            }
-            .button {
-                padding: 0.4em 0.8em; /* Меньшие кнопки для мобильных */
-            }
-            video {
-                width: 100%; /* Видео адаптируется к мобильному экрану */
-                height: auto; /* Автоматическая высота */
-            }
-        }
-    </style>
+    <link rel="icon" href="favicon.png" type="image/png">
+    <title>Вторая страница</title>
+    <meta name="theme-color" content="#070a14">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script>
+        (function () {
+            var saved = localStorage.getItem("theme");
+            var theme = saved || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+            document.documentElement.setAttribute("data-theme", theme);
+        })();
+    </script>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="container">
-        <h1>Добро пожаловать на вторую страницу</h1>
-        <p></p>
-        <div class="video-container">
-            <video autoplay muted>
-                <source src="Gen-3 Alpha Turbo 922435381, Cropped - jhhgjhgjgh, M 5.mp4" type="video/mp4">
-                <source src="Gen-3 Alpha Turbo 922435381, Cropped - jhhgjhgjgh, M 5.webm" type="video/webm">
-                <source src="Gen-3 Alpha Turbo 922435381, Cropped - jhhgjhgjgh, M 5.ogg" type="video/ogg">
-                Ваш браузер не поддерживает HTML5 видео.
-            </video>
-        </div>
-        <a href="index.html" class="button">Вернуться на главную страницу</a>
+    <div class="aurora" aria-hidden="true">
+        <span class="blob b1"></span><span class="blob b2"></span><span class="blob b3"></span>
+        <span class="blob b4"></span><span class="blob b5"></span><span class="blob b6"></span>
+        <span class="grain"></span>
     </div>
-    <footer>
-        <p>© 2024 Моя компания. Все права защищены.</p>
-    </footer>
+    <div class="page-center">
+        <div class="content-wrapper">
+            <h1>Добро пожаловать на вторую страницу</h1>
+            <div class="video-container">
+                <video autoplay muted loop playsinline>
+                    <source src="intro-video-no-watermark.mp4" type="video/mp4">
+                    Ваш браузер не поддерживает HTML5 видео.
+                </video>
+            </div>
+            <a href="index.html" class="return-button">← Вернуться на главную</a>
+        </div>
+    </div>
+    <footer><p>© 2026 · PRISMA — личная стартовая страница</p></footer>
 </body>
 </html>
