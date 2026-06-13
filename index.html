@@ -1,250 +1,190 @@
 <!DOCTYPE html>
-<html>
+<html lang="ru">
 <head>
-    <title>Полезные Ссылки</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="favicon.png" type="image/png">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <style>
-        body {
-            background-color: #f2f2f2;
-            font-family: Arial, sans-serif;
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
-            padding-top: 20px;
-        }
-        .header {
-            display: flex;
-            justify-content: flex-end;
-            padding: 5px 20px;
-            position: fixed;
-            top: 20px;
-            left: 0;
-            right: 0;
-            z-index: 1000;
-            background-color: transparent;
-        }
-        .login-button {
-            background-color: #4285f4;
-            color: #fff;
-            border: none;
-            border-radius: 3px;
-            padding: 3px 8px;
-            cursor: pointer;
-            text-decoration: none;
-            font-size: 12px;
-            display: flex;
-            align-items: center;
-            gap: 5px;
-        }
-        .login-button:hover {
-            background-color: #3367d6;
-        }
-        .container {
-            max-width: 800px;
-            margin: 0 auto 10px;
-            padding: 20px;
-            text-align: center;
-            flex-grow: 1;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-        }
-        h1 {
-            font-size: 36px;
-            font-weight: 900;
-            margin-bottom: 20px;
-            background: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-        form {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin-bottom: 20px;
-            width: 100%;
-            max-width: 500px;
-            margin: 0 auto;
-        }
-        input[type="text"] {
-            padding: 10px;
-            border: none;
-            border-radius: 5px;
-            box-shadow: 0 0 5px #ccc;
-            flex-grow: 1;
-            margin-right: 10px;
-        }
-        button {
-            background-color: #4285f4;
-            color: #fff;
-            border: none;
-            border-radius: 5px;
-            padding: 10px 20px;
-            cursor: pointer;
-        }
-        button:hover {
-            background-color: #3367d6;
-        }
-        .buttons {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 10px;
-        }
-        .button {
-            background-color: #4285f4;
-            color: #fff;
-            border: none;
-            border-radius: 5px;
-            padding: 10px;
-            margin: 5px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            text-decoration: none;
-            font-size: 14px;
-            display: flex;
-            align-items: center;
-            gap: 5px;
-        }
-        .button:hover {
-            background-color: #3367d6;
-        }
-        .footer-button {
-            background: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
-            color: #fff;
-            border: none;
-            border-radius: 5px;
-            padding: 10px 20px;
-            margin: 20px 0;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            text-decoration: none;
-            font-weight: bold;
-        }
-        .footer-button:hover {
-            opacity: 0.8;
-        }
-        footer {
-            background-color: transparent;
-            text-align: center;
-            padding: 20px;
-            margin-top: auto;
-        }
-        @media (max-width: 600px) {
-            h1 {
-                font-size: 28px;
-            }
-            .button {
-                padding: 8px;
-                font-size: 12px;
-            }
-            .footer-button {
-                padding: 8px 16px;
-                font-size: 14px;
-            }
-        }
-    </style>
+    <title>Стартовая страница</title>
+    <meta name="description" content="Личная стартовая страница: спектр, мультипоиск и быстрый запуск избранных сайтов.">
+    <meta name="theme-color" content="#070a14">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        (function () {
+            var saved = localStorage.getItem("theme");
+            var theme = saved || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+            document.documentElement.setAttribute("data-theme", theme);
+        })();
+    </script>
+    <script src="script.js" defer></script>
 </head>
 <body>
-    <div class="header">
-        <a href="https://mail.google.com/" target="_blank" class="login-button">
-            <i class="fas fa-envelope"></i> Войти
-        </a>
+    <div class="aurora" aria-hidden="true">
+        <span class="blob b1"></span><span class="blob b2"></span><span class="blob b3"></span>
+        <span class="blob b4"></span><span class="blob b5"></span><span class="blob b6"></span>
+        <span class="grain"></span>
     </div>
-    <div class="container">
-        <h1>Google Search</h1>
-        <form action="https://www.google.com/search" method="GET" target="_blank">
-            <input type="text" name="q" placeholder="Search...">
-            <button type="submit">Search</button>
-        </form>
-        
-        <h2 style="color: #ff6347;">Социальные сети</h2>
-        <div class="buttons">
-            <a href="https://www.youtube.com/" target="_blank" class="button"><i class="fab fa-youtube"></i>YouTube</a>
-            <a href="https://www.facebook.com/" target="_blank" class="button"><i class="fab fa-facebook"></i>Facebook</a>
-            <a href="https://www.instagram.com/" target="_blank" class="button"><i class="fab fa-instagram"></i>Instagram</a>
-            <a href="https://www.twitter.com/" target="_blank" class="button"><i class="fab fa-twitter"></i>Twitter</a>
-            <a href="https://vk.com/id551649082/" target="_blank" class="button"><i class="fab fa-vk"></i>ВКонтакте</a>
-            <a href="https://discord.com/channels/1007000829741506630/1007000829741506633" target="_blank" class="button"><i class="fab fa-discord"></i>Discord</a>
-            <a href="https://www.tiktok.com/explore" target="_blank" class="button"><i class="fab fa-tiktok"></i>TIKTOK</a>
-        </div>
-        
-        <h2 style="color: #4682b4;">Новостные сайты и другие </h2>
-        <div class="buttons">
-            <a href="https://news.startpage.co.il/russian/" target="_blank" class="button"><i class="fas fa-newspaper"></i>StartPage</a>
-            <a href="https://www.yaplakal.com/" target="_blank" class="button"><i class="fas fa-comments"></i>Я Плакал</a>
-            <a href="https://habr.com/ru/articles/" target="_blank" class="button"><i class="fa-brands fa-jedi-order"></i>Хабр</a>
-            <a href="https://mspoweruser.com/" target="_blank" class="button"><i class="fas fa-laptop"></i>Последние технические новости</a>
-            <a href="https://neurohive.io/ru/" target="_blank" class="button"><i class="fas fa-brain"></i>Neurohive Новости </a>
-            <a href="https://club.dns-shop.ru/" target="_blank" class="button"><i class="fas fa-store"></i>DNS Клуб </a>
-            <a href="https://remontka.pro/" target="_blank" class="button"><i class="fas fa-tools"></i>Remontka.Pro</a>
-            <a href="https://kod.ru/" target="_blank" class="button"><i class="fas fa-tools"></i>КОД ДУРОВА</a>
-            <a href="https://letsconvene.im/app/#/" target="_blank" class="button"><i class="fas fa-users"></i>Комнаты</a>
-            <a href="https://ru.pinterest.com/" target="_blank" class="button"><i class="fa-brands fa-pinterest"></i>Pinterest</a>
-            <a href="https://translate.google.com/?hl=ru&sl=ru&tl=en&op=translate" target="_blank" class="button"><i class="fas fa-language"></i>Переводчик </a>
-            <a href="https://translit.ru/" target="_blank" class="button"><i class="fas fa-text-width"></i>Translit</a>
-            <a href="https://www.reddit.com/" target="_blank" class="button"><i class="fas fa-text-width"></i>Reddit</a>
-            <a href="https://fmhy.net/" target="_blank" class="button"><i class="fas fa-text-width"></i>FMHY</a>
-        </div>
-        
-        <h2 style="color: #32cd32;">Сайты с искусственным интеллектом</h2>
-        <div class="buttons">
-            <a href="https://chat.openai.com/" target="_blank" class="button"><i class="fas fa-comments"></i>ChatGPT</a>
-            <a href="https://gemini.google.com/u/1/app?hl=ru" target="_blank" class="button"><i class="fab fa-google"></i>GEMINI</a>
-            <a href="https://platform.openai.com/playground" target="_blank" class="button"><i class="fas fa-cogs"></i>Playground</a>
-            <a href="https://you.com/search?q=who+are+you&tbm=youchat&cfr=chat/" target="_blank" class="button"><i class="fas fa-comments"></i>ChatYOU</a>
-            <a href="https://groq.com/" target="_blank" class="button"><i class="fas fa-robot"></i>Groq</a>
-            <a href="https://chat.mistral.ai/chat" target="_blank" class="button"><i class="fas fa-robot"></i>Mistral AI</a>
-            <a href="https://www.perplexity.ai/" target="_blank" class="button"><i class="fas fa-question-circle"></i>Perplexity</a>
-            <a href="https://poe.com/" target="_blank" class="button"><i class="fas fa-comment-dots"></i>Poe</a>
-            <a href="https://ya.ru/?npr=1&utm_referrer=https%3A%2F%2Fyandex.ru%2F&neuro=1" target="_blank" class="button"><i class="fas fa-brain"></i>Нейро</a>
-            <a href="https://www.bing.com/search?q=Bing+AI&showconv=1&FORM=hpcodx/" target="_blank" class="button"><i class="fas fa-search"></i>COPILOT</a>
-            <a href="https://andisearch.com/" target="_blank" class="button"><i class="fas fa-search"></i>Andi</a>
-            <a href="https://overallgpt.com/" target="_blank" class="button"><i class="fas fa-th"></i>ВсегоGPT</a>
-            <a href="https://claude.ai/new" target="_blank" class="button"><i class="fas fa-robot"></i>Claude</a>
-            <a href="https://huggingface.co/chat/" target="_blank" class="button"><i class="fas fa-comments"></i>HuggingChat </a>
-            <a href="https://chat.deepseek.com/" target="_blank" class="button"><i class="fas fa-comments"></i>DEEPSEEK </a>
-            <a href="https://x.com/i/grok/" target="_blank" class="button"><i class="fas fa-comments"></i> GROK</a>
-            <a href="https://github.com/copilot" target="_blank" class="button"><i class="fas fa-comments"></i> GithubCopilot</a>
-            <a href="https://chat.qwenlm.ai/" target="_blank" class="button"><i class="fas fa-comments"></i> Qwin Chat</a>
-            <a href="https://kimi.ai/chat/empty/" target="_blank" class="button"><i class="fas fa-comments"></i> Kimi Ai</a>
-            
-        </div>
-        
-        <h2 style="color: #9370DB;">Сайты для создания-редактирования текста и изображений </h2>
-        <div class="buttons">
-            <a href="https://www.shakker.ai/aigenerator" target="_blank" class="button"><i class="fas fa-image"></i>AIgenerator</a>
-            <a href="https://myneuralnetworks.ru/generating_images_from_text/" target="_blank" class="button"><i class="fas fa-image"></i>Акулы нейронных сетей</a>
-            <a href="https://klingai.com/" target="_blank" class="button"><i class="fas fa-paint-brush"></i>KLING AI</a>
-            <a href="https://www.krea.ai/apps/image/flux" target="_blank" class="button"><i class="fas fa-paint-brush"></i>Krea</a>
-            <a href="https://app.nichetensor.com/?feature=textToImage" target="_blank" class="button"><i class="fas fa-image"></i>ГенерКартинок</a>
-            <a href="https://glif.app/@001/glifs/clzgvha5a00041aepvz2h4zi4" target="_blank" class="button"><i class="fas fa-image"></i>FLUX.1-pro</a>
-            <a href="https://huggingface.co/spaces/black-forest-labs/FLUX.1-schnell" target="_blank" class="button"><i class="fas fa-image"></i>FLUX.1-schnell</a>
-            <a href="https://www.blinkshot.io/" target="_blank" class="button"><i class="fas fa-camera"></i>BlinKshot AI</a>
-            <a href="https://crayonai.net/ai-assistant" target="_blank" class="button"><i class="fas fa-pencil-alt"></i>ИИ Карандаш </a>
-            <a href="https://www.iloveimg.com/ru" target="_blank" class="button"><i class="fas fa-tools"></i>Все инструменты для изображений</a>
-            <a href="https://glyphy.io/?hl=en" target="_blank" class="button"><i class="fas fa-font"></i>Глифы</a>
-            <a href="https://www.i2img.com/ru/?hl=en" target="_blank" class="button"><i class="fas fa-image"></i>i2IMG</a>
-            <a href="https://boxicons.com/" target="_blank" class="button"><i class="fas fa-box"></i>Boxicons</a>
-            <a href="https://www.vidmore.com/ru/watermark-remover/#" target="_blank" class="button"><i class="fas fa-eraser"></i>Удаления водяных знаков</a>
-            <a href="https://neuralwriter.com/ru/prompt-tool/#progress=157" target="_blank" class="button"><i class="fas fa-lightbulb"></i>Генератор промптов ChatGPT</a>
 
+    <header class="topbar">
+        <a class="brand" href="index.html">
+            <span class="prism" aria-hidden="true"></span>
+            <span class="brand-name">PRISMA</span>
+        </a>
+        <div class="topbar-actions">
+            <button type="button" id="palette-open" class="kbd-btn" aria-label="Открыть командную палитру">
+                <span class="kbd-icon">⌘</span>K · Запуск
+            </button>
+            <button type="button" id="theme-toggle" class="icon-btn" aria-label="Переключить тему" title="Переключить тему">🌙</button>
+            <a href="https://mail.google.com/" target="_blank" class="login-button" rel="noopener noreferrer">Войти</a>
         </div>
-        
-        <a href="page2.html" class="footer-button">Перейти на вторую страницу</a>
+    </header>
+
+    <main>
+        <h1 class="sr-only">Стартовая страница</h1>
+
+        <section class="hero">
+            <p class="greeting" id="greeting">Здравствуйте</p>
+            <p class="clock" id="clock"></p>
+            <div class="beam" aria-hidden="true"></div>
+
+            <form id="search-form" class="search-card" action="https://www.google.com/search" method="GET" target="_blank" rel="noopener noreferrer">
+                <label for="engine" class="sr-only">Поисковая система</label>
+                <select id="engine" class="engine-select" aria-label="Поисковая система">
+                    <option value="https://www.google.com/search?q=">Google</option>
+                    <option value="https://yandex.ru/search/?text=">Яндекс</option>
+                    <option value="https://duckduckgo.com/?q=">DuckDuckGo</option>
+                    <option value="https://www.bing.com/search?q=">Bing</option>
+                    <option value="https://www.youtube.com/results?search_query=">YouTube</option>
+                    <option value="https://github.com/search?q=">GitHub</option>
+                    <option value="https://ru.wikipedia.org/w/index.php?search=">Википедия</option>
+                </select>
+                <label for="search-query" class="sr-only">Поисковый запрос</label>
+                <input id="search-query" type="text" name="q" placeholder="Поиск в интернете…" autocomplete="off">
+                <button type="submit">Искать</button>
+            </form>
+        </section>
+
+            <section class="panel" data-cat="Социальные сети">
+                <div class="panel-head">
+                    <span class="cat-spark" aria-hidden="true"></span>
+                    <h2 class="category-title">Социальные сети</h2>
+                    <span class="count">7</span>
+                </div>
+                <div class="tile-grid">
+                    <a class="tile" href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer" data-label="YouTube"><span class="tile-label">YouTube</span></a>
+                    <a class="tile" href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" data-label="Facebook"><span class="tile-label">Facebook</span></a>
+                    <a class="tile" href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" data-label="Instagram"><span class="tile-label">Instagram</span></a>
+                    <a class="tile" href="https://www.twitter.com/" target="_blank" rel="noopener noreferrer" data-label="Twitter"><span class="tile-label">Twitter</span></a>
+                    <a class="tile" href="https://vk.com/id551649082/" target="_blank" rel="noopener noreferrer" data-label="ВКонтакте"><span class="tile-label">ВКонтакте</span></a>
+                    <a class="tile" href="https://discord.com/channels/1007000829741506630/1007000829741506633" target="_blank" rel="noopener noreferrer" data-label="Discord"><span class="tile-label">Discord</span></a>
+                    <a class="tile" href="https://www.tiktok.com/explore" target="_blank" rel="noopener noreferrer" data-label="TIKTOK"><span class="tile-label">TIKTOK</span></a>
+                </div>
+            </section>
+
+            <section class="panel" data-cat="Новостные сайты и другие">
+                <div class="panel-head">
+                    <span class="cat-spark" aria-hidden="true"></span>
+                    <h2 class="category-title">Новостные сайты и другие</h2>
+                    <span class="count">14</span>
+                </div>
+                <div class="tile-grid">
+                    <a class="tile" href="https://news.startpage.co.il/russian/" target="_blank" rel="noopener noreferrer" data-label="StartPage"><span class="tile-label">StartPage</span></a>
+                    <a class="tile" href="https://www.yaplakal.com/" target="_blank" rel="noopener noreferrer" data-label="Я Плакал"><span class="tile-label">Я Плакал</span></a>
+                    <a class="tile" href="https://habr.com/ru/articles/" target="_blank" rel="noopener noreferrer" data-label="Хабр"><span class="tile-label">Хабр</span></a>
+                    <a class="tile" href="https://mspoweruser.com/" target="_blank" rel="noopener noreferrer" data-label="Последние технические новости"><span class="tile-label">Последние технические новости</span></a>
+                    <a class="tile" href="https://neurohive.io/ru/" target="_blank" rel="noopener noreferrer" data-label="Neurohive Новости"><span class="tile-label">Neurohive Новости</span></a>
+                    <a class="tile" href="https://club.dns-shop.ru/" target="_blank" rel="noopener noreferrer" data-label="DNS Клуб"><span class="tile-label">DNS Клуб</span></a>
+                    <a class="tile" href="https://remontka.pro/" target="_blank" rel="noopener noreferrer" data-label="Remontka.Pro"><span class="tile-label">Remontka.Pro</span></a>
+                    <a class="tile" href="https://kod.ru/" target="_blank" rel="noopener noreferrer" data-label="КОД ДУРОВА"><span class="tile-label">КОД ДУРОВА</span></a>
+                    <a class="tile" href="https://letsconvene.im/app/#/" target="_blank" rel="noopener noreferrer" data-label="Комнаты"><span class="tile-label">Комнаты</span></a>
+                    <a class="tile" href="https://ru.pinterest.com/" target="_blank" rel="noopener noreferrer" data-label="Pinterest"><span class="tile-label">Pinterest</span></a>
+                    <a class="tile" href="https://translate.google.com/?hl=ru&amp;amp;sl=ru&amp;amp;tl=en&amp;amp;op=translate" target="_blank" rel="noopener noreferrer" data-label="Переводчик"><span class="tile-label">Переводчик</span></a>
+                    <a class="tile" href="https://translit.ru/" target="_blank" rel="noopener noreferrer" data-label="Translit"><span class="tile-label">Translit</span></a>
+                    <a class="tile" href="https://www.reddit.com/" target="_blank" rel="noopener noreferrer" data-label="Reddit"><span class="tile-label">Reddit</span></a>
+                    <a class="tile" href="https://fmhy.net/" target="_blank" rel="noopener noreferrer" data-label="FMHY"><span class="tile-label">FMHY</span></a>
+                </div>
+            </section>
+
+            <section class="panel" data-cat="Сайты с искусственным интеллектом">
+                <div class="panel-head">
+                    <span class="cat-spark" aria-hidden="true"></span>
+                    <h2 class="category-title">Сайты с искусственным интеллектом</h2>
+                    <span class="count">21</span>
+                </div>
+                <div class="tile-grid">
+                    <a class="tile" href="https://chat.openai.com/" target="_blank" rel="noopener noreferrer" data-label="ChatGPT"><span class="tile-label">ChatGPT</span></a>
+                    <a class="tile" href="https://gemini.google.com/u/1/app?hl=ru" target="_blank" rel="noopener noreferrer" data-label="GEMINI"><span class="tile-label">GEMINI</span></a>
+                    <a class="tile" href="https://aistudio.google.com/" target="_blank" rel="noopener noreferrer" data-label="Google AI Studio"><span class="tile-label">Google AI Studio</span></a>
+                    <a class="tile" href="https://platform.openai.com/playground" target="_blank" rel="noopener noreferrer" data-label="Playground"><span class="tile-label">Playground</span></a>
+                    <a class="tile" href="https://you.com/search?q=who+are+you&amp;amp;tbm=youchat&amp;amp;cfr=chat/" target="_blank" rel="noopener noreferrer" data-label="ChatYOU"><span class="tile-label">ChatYOU</span></a>
+                    <a class="tile" href="https://groq.com/" target="_blank" rel="noopener noreferrer" data-label="Groq"><span class="tile-label">Groq</span></a>
+                    <a class="tile" href="https://chat.mistral.ai/chat" target="_blank" rel="noopener noreferrer" data-label="Mistral AI"><span class="tile-label">Mistral AI</span></a>
+                    <a class="tile" href="https://www.perplexity.ai/" target="_blank" rel="noopener noreferrer" data-label="Perplexity"><span class="tile-label">Perplexity</span></a>
+                    <a class="tile" href="https://poe.com/" target="_blank" rel="noopener noreferrer" data-label="Poe"><span class="tile-label">Poe</span></a>
+                    <a class="tile" href="https://ya.ru/?npr=1&amp;amp;utm_referrer=https%3A%2F%2Fyandex.ru%2F&amp;amp;neuro=1" target="_blank" rel="noopener noreferrer" data-label="Нейро"><span class="tile-label">Нейро</span></a>
+                    <a class="tile" href="https://www.bing.com/search?q=Bing+AI&amp;amp;showconv=1&amp;amp;FORM=hpcodx/" target="_blank" rel="noopener noreferrer" data-label="COPILOT"><span class="tile-label">COPILOT</span></a>
+                    <a class="tile" href="https://andisearch.com/" target="_blank" rel="noopener noreferrer" data-label="Andi"><span class="tile-label">Andi</span></a>
+                    <a class="tile" href="https://overallgpt.com/" target="_blank" rel="noopener noreferrer" data-label="ВсегоGPT"><span class="tile-label">ВсегоGPT</span></a>
+                    <a class="tile" href="https://claude.ai/new" target="_blank" rel="noopener noreferrer" data-label="Claude"><span class="tile-label">Claude</span></a>
+                    <a class="tile" href="https://huggingface.co/chat/" target="_blank" rel="noopener noreferrer" data-label="HuggingChat"><span class="tile-label">HuggingChat</span></a>
+                    <a class="tile" href="https://chat.deepseek.com/" target="_blank" rel="noopener noreferrer" data-label="DEEPSEEK"><span class="tile-label">DEEPSEEK</span></a>
+                    <a class="tile" href="https://x.com/i/grok/" target="_blank" rel="noopener noreferrer" data-label="GROK"><span class="tile-label">GROK</span></a>
+                    <a class="tile" href="https://github.com/copilot" target="_blank" rel="noopener noreferrer" data-label="GithubCopilot"><span class="tile-label">GithubCopilot</span></a>
+                    <a class="tile" href="https://chat.qwenlm.ai/" target="_blank" rel="noopener noreferrer" data-label="Qwin Chat"><span class="tile-label">Qwin Chat</span></a>
+                    <a class="tile" href="https://kimi.ai/chat/empty/" target="_blank" rel="noopener noreferrer" data-label="Kimi Ai"><span class="tile-label">Kimi Ai</span></a>
+                    <a class="tile" href="https://arena.ai/text/direct" target="_blank" rel="noopener noreferrer" data-label="Arena AI"><span class="tile-label">Arena AI</span></a>
+                </div>
+            </section>
+
+            <section class="panel" data-cat="Сайты для создания-редактирования текста и изображений">
+                <div class="panel-head">
+                    <span class="cat-spark" aria-hidden="true"></span>
+                    <h2 class="category-title">Сайты для создания-редактирования текста и изображений</h2>
+                    <span class="count">17</span>
+                </div>
+                <div class="tile-grid">
+                    <a class="tile" href="https://www.shakker.ai/aigenerator" target="_blank" rel="noopener noreferrer" data-label="AIgenerator"><span class="tile-label">AIgenerator</span></a>
+                    <a class="tile" href="https://myneuralnetworks.ru/generating_images_from_text/" target="_blank" rel="noopener noreferrer" data-label="Акулы нейронных сетей"><span class="tile-label">Акулы нейронных сетей</span></a>
+                    <a class="tile" href="https://klingai.com/" target="_blank" rel="noopener noreferrer" data-label="KLING AI"><span class="tile-label">KLING AI</span></a>
+                    <a class="tile" href="https://www.krea.ai/apps/image/flux" target="_blank" rel="noopener noreferrer" data-label="Krea"><span class="tile-label">Krea</span></a>
+                    <a class="tile" href="https://app.nichetensor.com/?feature=textToImage" target="_blank" rel="noopener noreferrer" data-label="ГенерКартинок"><span class="tile-label">ГенерКартинок</span></a>
+                    <a class="tile" href="https://glif.app/@001/glifs/clzgvha5a00041aepvz2h4zi4" target="_blank" rel="noopener noreferrer" data-label="FLUX.1-pro"><span class="tile-label">FLUX.1-pro</span></a>
+                    <a class="tile" href="https://huggingface.co/spaces/black-forest-labs/FLUX.1-schnell" target="_blank" rel="noopener noreferrer" data-label="FLUX.1-schnell"><span class="tile-label">FLUX.1-schnell</span></a>
+                    <a class="tile" href="https://www.blinkshot.io/" target="_blank" rel="noopener noreferrer" data-label="BlinKshot AI"><span class="tile-label">BlinKshot AI</span></a>
+                    <a class="tile" href="https://labs.google/fx/ru/tools/flow/project/53d391fd-d0f0-4eb6-b9fb-6c8294e0c296" target="_blank" rel="noopener noreferrer" data-label="Google Flow"><span class="tile-label">Google Flow</span></a>
+                    <a class="tile" href="https://www.bing.com/images?FORM=HDRSC2" target="_blank" rel="noopener noreferrer" data-label="Bing Images"><span class="tile-label">Bing Images</span></a>
+                    <a class="tile" href="https://zonerai.com/ru" target="_blank" rel="noopener noreferrer" data-label="ZonerAI"><span class="tile-label">ZonerAI</span></a>
+                    <a class="tile" href="https://crayonai.net/ai-assistant" target="_blank" rel="noopener noreferrer" data-label="ИИ Карандаш"><span class="tile-label">ИИ Карандаш</span></a>
+                    <a class="tile" href="https://www.iloveimg.com/ru" target="_blank" rel="noopener noreferrer" data-label="Все инструменты для изображений"><span class="tile-label">Все инструменты для изображений</span></a>
+                    <a class="tile" href="https://glyphy.io/?hl=en" target="_blank" rel="noopener noreferrer" data-label="Глифы"><span class="tile-label">Глифы</span></a>
+                    <a class="tile" href="https://www.i2img.com/ru/?hl=en" target="_blank" rel="noopener noreferrer" data-label="i2IMG"><span class="tile-label">i2IMG</span></a>
+                    <a class="tile" href="https://boxicons.com/" target="_blank" rel="noopener noreferrer" data-label="Boxicons"><span class="tile-label">Boxicons</span></a>
+                    <a class="tile" href="https://www.vidmore.com/ru/watermark-remover/#" target="_blank" rel="noopener noreferrer" data-label="Удаления водяных знаков"><span class="tile-label">Удаления водяных знаков</span></a>
+                </div>
+            </section>
+
+        <a href="page2.html" class="footer-button">Перейти на вторую страницу →</a>
+    </main>
+
+    <footer><p>© 2026 · PRISMA — личная стартовая страница</p></footer>
+
+    <!-- Командная палитра -->
+    <div class="palette-overlay" id="palette" hidden>
+        <div class="palette" role="dialog" aria-modal="true" aria-label="Командная палитра">
+            <div class="palette-input-wrap">
+                <span class="palette-search-icon" aria-hidden="true">⌕</span>
+                <input type="text" id="palette-input" placeholder="Куда отправимся? Печатайте название сайта или запрос…" autocomplete="off" aria-label="Поиск по сайтам">
+                <span class="palette-esc">Esc</span>
+            </div>
+            <ul class="palette-list" id="palette-list" role="listbox"></ul>
+            <div class="palette-foot">
+                <span><kbd>↑</kbd><kbd>↓</kbd> выбрать</span>
+                <span><kbd>↵</kbd> открыть</span>
+                <span><kbd>⌘K</kbd> / <kbd>/</kbd> вызвать</span>
+            </div>
+        </div>
     </div>
-    <footer>
-        <p>© 2026 Моя компания. Все права защищены.</p>
-    </footer>
 </body>
 </html>
-
-
-
-
-
-
-
