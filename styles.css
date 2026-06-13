@@ -143,13 +143,14 @@ body {
 .icon-btn:hover { transform: translateY(-1px) scale(1.05); border-color: var(--accent); }
 
 .login-button {
-    height: 40px; padding: 0 18px; border-radius: 11px;
-    display: inline-flex; align-items: center;
-    background: var(--accent); color: #fff; font-weight: 600; font-size: 14px;
-    text-decoration: none; border: none;
-    transition: background 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+    width: 40px; height: 40px; padding: 0; border-radius: 11px;
+    display: inline-flex; align-items: center; justify-content: center;
+    background: var(--glass); border: 1px solid var(--border-hi);
+    backdrop-filter: blur(12px) saturate(1.4); -webkit-backdrop-filter: blur(12px) saturate(1.4);
+    transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
 }
-.login-button:hover { background: var(--accent-2); transform: translateY(-1px); box-shadow: 0 6px 18px var(--tile-glow); }
+.login-button:hover { transform: translateY(-1px) scale(1.05); border-color: var(--accent); box-shadow: 0 6px 18px var(--tile-glow); }
+.mail-icon { width: 22px; height: 22px; display: block; }
 
 /* ===================== Контент ===================== */
 main {
@@ -181,26 +182,26 @@ main {
 }
 
 .search-card {
-    display: flex; align-items: stretch; gap: 8px; flex-wrap: wrap;
-    max-width: 660px; margin: 0 auto; padding: 9px;
-    background: var(--glass); border: 1px solid var(--border-hi); border-radius: 18px;
-    box-shadow: 0 20px 50px var(--shadow);
+    display: flex; align-items: stretch; gap: 7px; flex-wrap: wrap;
+    max-width: 600px; margin: 0 auto; padding: 7px;
+    background: var(--glass); border: 1px solid var(--border-hi); border-radius: 16px;
+    box-shadow: 0 18px 44px var(--shadow);
     backdrop-filter: blur(18px) saturate(1.5); -webkit-backdrop-filter: blur(18px) saturate(1.5);
 }
 .engine-select {
-    border: 1px solid var(--border); border-radius: 12px;
-    background: var(--glass-2); color: var(--text); padding: 0 12px; font-size: 14px; cursor: pointer;
+    border: 1px solid var(--border); border-radius: 11px;
+    background: var(--glass-2); color: var(--text); padding: 0 11px; font-size: 13px; cursor: pointer;
 }
 .search-card input[type="text"] {
-    flex: 1 1 220px; min-width: 0;
-    border: 1px solid var(--border); border-radius: 12px;
-    background: var(--glass-2); color: var(--text); padding: 13px 16px; font-size: 15px;
+    flex: 1 1 200px; min-width: 0;
+    border: 1px solid var(--border); border-radius: 11px;
+    background: var(--glass-2); color: var(--text); padding: 11px 14px; font-size: 14px;
 }
 .search-card input::placeholder { color: var(--muted); }
 .search-card input:focus, .engine-select:focus { outline: 2px solid var(--accent); outline-offset: 1px; }
 .search-card button {
-    border: none; border-radius: 12px; background: var(--accent); color: #fff;
-    font-weight: 700; font-size: 15px; padding: 13px 26px; cursor: pointer;
+    border: none; border-radius: 11px; background: var(--accent); color: #fff;
+    font-weight: 600; font-size: 14px; padding: 11px 20px; cursor: pointer;
     transition: background 0.2s ease, box-shadow 0.2s ease;
 }
 .search-card button:hover { background: var(--accent-2); box-shadow: 0 6px 20px var(--tile-glow); }
@@ -253,13 +254,13 @@ main {
 
 /* ---- Нижняя кнопка / футер ---- */
 .footer-button, .return-button {
-    display: block; width: fit-content; margin: 30px auto 8px; padding: 13px 28px;
-    border: none; border-radius: 14px;
-    background: linear-gradient(90deg, #ff6347, #9370db); color: #fff; font-weight: 700; text-decoration: none;
-    box-shadow: 0 10px 28px rgba(147, 112, 219, 0.4);
+    display: block; width: fit-content; margin: 26px auto 6px; padding: 9px 18px;
+    border: none; border-radius: 11px;
+    background: linear-gradient(90deg, #ff6347, #9370db); color: #fff; font-weight: 600; font-size: 14px; text-decoration: none;
+    box-shadow: 0 8px 18px rgba(147, 112, 219, 0.3);
     transition: transform 0.16s ease, box-shadow 0.2s ease;
 }
-.footer-button:hover, .return-button:hover { transform: translateY(-2px); box-shadow: 0 14px 34px rgba(147,112,219,0.5); }
+.footer-button:hover, .return-button:hover { transform: translateY(-2px); box-shadow: 0 10px 24px rgba(147,112,219,0.42); }
 footer { position: relative; z-index: 1; text-align: center; padding: 24px; color: var(--muted); font-size: 13px; }
 
 /* ===================== Командная палитра ===================== */
